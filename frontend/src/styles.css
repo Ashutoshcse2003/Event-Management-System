@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens - CSS Custom Properties */
+:root {
+  /* Colors */
+  --color-primary-500: #1f5eff;
+  --color-secondary-400: #77b1ff;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-600: #475569;
+  --color-neutral-900: #0f172a;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1f5eff 0%, #77b1ff 100%);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.brand {
+  margin: 0;
+}
+.brand a {
+  text-decoration: none;
+  color: var(--accent);
+}
+nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--muted);
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+}
+.form label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.alert {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.alert.error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.alert.success {
+  background: #ecfdf5;
+  color: #065f46;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
